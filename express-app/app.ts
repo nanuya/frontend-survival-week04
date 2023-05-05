@@ -1,1 +1,9 @@
-// TODO: Express 를 이용하여 서버를 만들어 주세요.
+import express from 'express';
+
+import router from './routes';
+
+const app = express();
+
+router(app);
+
+app.listen(3000);

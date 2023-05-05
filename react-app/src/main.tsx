@@ -2,11 +2,11 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 
 function main() {
-  const $root = document.querySelector('#root');
+  const $root = document.getElementById('root');
 
-  if (!$root) return null;
+  if (!$root) return;
 
-  return createRoot($root).render(<App />);
+  createRoot($root).render(<App />);
 }
 
 main();

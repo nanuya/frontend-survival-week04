@@ -22,6 +22,14 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'import/extensions': [
+      'error',
+      'ignorePackages', {
+        js: 'never',
+        ts: 'never',
+      },
+    ],
+    'import/prefer-default-export': ['off'],
     indent: ['error', 2],
     'no-trailing-spaces': 'error',
     curly: 'error',
@@ -42,5 +50,12 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     'key-spacing': ['error', { mode: 'strict' }],
     'arrow-spacing': ['error', { before: true, after: true }],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.ts'],
+      },
+    },
   },
 };
