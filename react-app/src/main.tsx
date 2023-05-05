@@ -1,5 +1,12 @@
+import { createRoot } from 'react-dom/client';
+import App from './App';
+
 function main() {
-  // TODO: App 컴포넌트를 render 해주세요.
+  const $root = document.querySelector('#root');
+
+  if (!$root) return null;
+
+  return createRoot($root).render(<App />);
 }
 
 main();
